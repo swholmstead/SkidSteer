@@ -5,7 +5,7 @@
 // Change log
 // * Changed polarity of LED light bar so that all motor clips face the same way.
 
-ControllerPtr myControllers[BP32_MAX_GAMEPADS];
+ControllerPtr myController;
 
 #define bucketServoPin 23
 #define clawServoPin 22
@@ -15,8 +15,8 @@ ControllerPtr myControllers[BP32_MAX_GAMEPADS];
 #define lightPin0 18  // Used for controlling cab lights
 #define lightPin1 5   // Used for controlling cab lights
 
-#define rightMotor0 26 // Used for controlling the right motor movement
-#define rightMotor1 25 // Used for controlling the right motor movement
+#define rightMotor0 25 // Used for controlling the right motor movement
+#define rightMotor1 26 // Used for controlling the right motor movement
 #define leftMotor0 32  // Used for controlling the left motor movement
 #define leftMotor1 33  // Used for controlling the left motor movement
 
@@ -53,42 +53,40 @@ const float DEG2RAD = PI / 180.0f;
 const float RAD2DEG = 180.0f / PI;
 
 void onConnectedController(ControllerPtr ctl) {
-  bool foundEmptySlot = false;
-  for (int i = 0; i < BP32_MAX_GAMEPADS; i++) {
-    if (myControllers[i] == nullptr) {
-      Serial.printf("CALLBACK: Controller is connected, index=%d\n", i);
-      // Additionally, you can get certain gamepad properties like:
-      // Model, VID, PID, BTAddr, flags, etc.
-      ControllerProperties properties = ctl->getProperties();
-      Serial.printf("Controller model: %s, VID=0x%04x, PID=0x%04x\n", ctl->getModelName().c_str(), properties.vendor_id,
-                    properties.product_id);
-      myControllers[i] = ctl;
-      ctl->playDualRumble(0 /* delayedStartMs */, 250 /* durationMs */, 0x80 /* weakMagnitude */, 0x40 /* strongMagnitude */);
-      foundEmptySlot = true;
-      shouldWiggle = true;
-      processLights(true);
-      break;
-    }
+  ControllerProperties properties = ctl->getProperties();
+  auto btAddress = properties.btaddr;
+  if (myController == nullptr) {
+    Serial.printf("CALLBACK: Controller is connected, ADDR=%2X:%2X:%2X:%2X:%2X:%2X\n",
+                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+    // Additionally, you can get certain gamepad properties like:
+    // Model, VID, PID, BTAddr, flags, etc.
+    Serial.printf("Controller model: %s, VID=0x%04x, PID=0x%04x\n", ctl->getModelName().c_str(), properties.vendor_id,
+                  properties.product_id);
+    myController = ctl;
+    BP32.enableNewBluetoothConnections(false);
+    ctl->playDualRumble(0 /* delayedStartMs */, 250 /* durationMs */, 0x80 /* weakMagnitude */, 0x40 /* strongMagnitude */);
+    shouldWiggle = true;
+    processLights(true);
   }
-  if (!foundEmptySlot) {
-    Serial.println("CALLBACK: Controller connected, but could not found empty slot");
+  else {
+    Serial.printf("CALLBACK: Controller connected, ADDR=%2X:%2X:%2X:%2X:%2X:%2X, but another controller already connected.\n",
+                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+    ctl->disconnect();
   }
 }
 
 void onDisconnectedController(ControllerPtr ctl) {
-  bool foundController = false;
-
-  for (int i = 0; i < BP32_MAX_GAMEPADS; i++) {
-    if (myControllers[i] == ctl) {
-      Serial.printf("CALLBACK: Controller disconnected from index=%d\n", i);
-      myControllers[i] = nullptr;
-      foundController = true;
-      break;
-    }
+  ControllerProperties properties = ctl->getProperties();
+  auto btAddress = properties.btaddr;
+  if (myController == ctl) {
+    Serial.printf("CALLBACK: Controller disconnected ADDR=%2X:%2X:%2X:%2X:%2X:%2X\n",
+                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+    myController = nullptr;
+    BP32.enableNewBluetoothConnections(true);
   }
-
-  if (!foundController) {
-    Serial.println("CALLBACK: Controller disconnected, but not found in myControllers");
+  else {
+    Serial.printf("CALLBACK: Controller disconnected, ADDR=%2X:%2X:%2X:%2X:%2X:%2X, but not active controller\n",
+                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
   }
 }
 
@@ -211,14 +209,12 @@ void moveMotor(int motorPin0, int motorPin1, int velocity) {
   }
 }
 
-void processControllers() {
-  for (auto myController : myControllers) {
-    if (myController && myController->isConnected() && myController->hasData()) {
-      if (myController->isGamepad()) {
-        processGamepad(myController);
-      } else {
-        Serial.println("Unsupported controller");
-      }
+void processController() {
+  if (myController && myController->isConnected() && myController->hasData()) {
+    if (myController->isGamepad()) {
+      processGamepad(myController);
+    } else {
+      Serial.println("Unsupported controller");
     }
   }
 }
@@ -279,7 +275,7 @@ void loop() {
   // Call this function in your main loop.
   bool dataUpdated = BP32.update();
   if (dataUpdated) {
-    processControllers();
+    processController();
   }
   if (shouldWiggle) {
     wiggle();
