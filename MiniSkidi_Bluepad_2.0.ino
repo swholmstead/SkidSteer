@@ -29,7 +29,6 @@ ControllerPtr myController;
 #define bucketMin 10
 #define bucketMax 140
 #define bucketStart 122
-#define bucketMoveSpeed 3
 #define clawMin 10
 #define clawMax 120
 #define clawMoveSpeed 6
@@ -93,10 +92,12 @@ void onDisconnectedController(ControllerPtr ctl) {
 void processGamepad(ControllerPtr ctl) {
   //Throttle
   processThrottle(ctl->axisX(), ctl->axisY());
-  //Rasing and lowering of mast
+  //Raising and lowering of arm
   processArm(ctl->axisRY());
-  //MastTilt
-  processBucket(ctl->dpad());
+  //Raising and lowering the bucket
+  processBucket(ctl->axisRX());
+  //Raising and lowering the claw
+  processClaw(ctl->dpad());
   //Aux
   processLights(ctl->thumbR() | ctl->a());
 
@@ -155,19 +156,31 @@ void processArm(int newValue) {
 }
 
 void processBucket(int newValue) {
-  if (newValue & dpadRight) {
-    if (bucketValue < bucketMax) {
-      bucketValue += bucketMoveSpeed;
-      //Serial.printf("bucket: %d\n", bucketValue);
-      bucketServo.write(bucketValue);
+  // remove dead zone
+  if (abs(newValue) < deadZone) {
+    newValue = 0;
+  }
+  else if (newValue > 0) {
+    newValue -= deadZone;
+  }
+  else {
+    newValue += deadZone;
+  }
+
+  // calculate new bucket angle
+  bucketValue += newValue / 128;
+  if (bucketValue > bucketMax) {
+    bucketValue = bucketMax;
     }
-  } else if (newValue & dpadLeft) {
-    if (bucketValue > bucketMin) {
-      bucketValue -= bucketMoveSpeed;
-      //Serial.printf("bucket: %d\n", bucketValue);
-      bucketServo.write(bucketValue);
-    }
-  } else if (newValue & dpadUp) {
+  if (bucketValue < bucketMin) {
+    bucketValue = bucketMin;
+  }
+  // Serial.printf("bucket: %d\n", bucketValue);
+  bucketServo.write(bucketValue);
+}
+
+void processClaw(int newValue) {
+  if (newValue & dpadUp) {
     if (clawValue < clawMax) {
       clawValue += clawMoveSpeed;
       clawServo.write(clawValue);
