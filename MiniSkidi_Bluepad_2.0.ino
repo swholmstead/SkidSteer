@@ -20,11 +20,6 @@ ControllerPtr myController;
 #define leftMotor0 32  // Used for controlling the left motor movement
 #define leftMotor1 33  // Used for controlling the left motor movement
 
-#define dpadUp 1
-#define dpadDown 2
-#define dpadRight 4
-#define dpadLeft 8
-
 #define deadZone 30
 #define bucketMin 10
 #define bucketMax 140
@@ -32,6 +27,8 @@ ControllerPtr myController;
 #define clawMin 10
 #define clawMax 120
 #define clawMoveSpeed 6
+#define throttleMultiplier 0.4f
+#define throttleLowGear 0.75f
 
 #define wiggleCountMax 6
 
@@ -91,7 +88,7 @@ void onDisconnectedController(ControllerPtr ctl) {
 
 void processGamepad(ControllerPtr ctl) {
   //Throttle
-  processThrottle(ctl->axisX(), ctl->axisY());
+  processThrottle(ctl->axisX(), ctl->axisY(), ctl->l1());
   //Raising and lowering of arm
   processArm(ctl->axisRY());
   //Raising and lowering the bucket
@@ -129,21 +126,21 @@ void wiggle() {
   }
 }
 
-void processThrottle(int newX, int newY) {
+void processThrottle(int newX, int newY, bool isLowGear) {
   float angle = atan2(newY, newX) * RAD2DEG;
   float amplitude = sqrtf(newX*newX + newY*newY);
   //Serial.printf("angle: %f amplitude: %f ", angle, amplitude);
 
-  float rightMotorValue = ((angle >= 0 && angle <= 90) ? 1 : (angle <= -90 ? -1 : angle > 90 ? cos((180 - angle * 2) * DEG2RAD) : cos(angle * 2 * DEG2RAD))) * amplitude / 3;
-  float leftMotorValue = (angle >= 90 ? 1 : (angle <= 0 && angle >= -90) ? -1 : angle > 0 ? cos((180 - angle * 2) * DEG2RAD) : cos(angle * 2 * DEG2RAD)) * amplitude / 3;
+  float rightMotorValue = ((angle >= 0 && angle <= 90) ? 1 : (angle <= -90 ? -1 : angle > 90 ? cos((180 - angle * 2) * DEG2RAD) : cos(angle * 2 * DEG2RAD))) * amplitude;
+  float leftMotorValue = (angle >= 90 ? 1 : (angle <= 0 && angle >= -90) ? -1 : angle > 0 ? cos((180 - angle * 2) * DEG2RAD) : cos(angle * 2 * DEG2RAD)) * amplitude;
   //Serial.printf("left: %f right: %f\n", rightMotorValue, leftMotorValue);
 
   if (amplitude <= deadZone) {
     rightMotorValue = 0;
     leftMotorValue = 0;
   }
-  moveMotor(rightMotor0, rightMotor1, rightMotorValue);
-  moveMotor(leftMotor0, leftMotor1, leftMotorValue);
+  moveMotor(rightMotor0, rightMotor1, rightMotorValue * throttleMultiplier * (isLowGear ? throttleLowGear : 1));
+  moveMotor(leftMotor0, leftMotor1, leftMotorValue * throttleMultiplier * (isLowGear ? throttleLowGear : 1));
 }
 
 void processArm(int newValue) {
@@ -180,12 +177,12 @@ void processBucket(int newValue) {
 }
 
 void processClaw(int newValue) {
-  if (newValue & dpadUp) {
+  if (newValue & DPAD_UP) {
     if (clawValue < clawMax) {
       clawValue += clawMoveSpeed;
       clawServo.write(clawValue);
     }
-  } else if (newValue & dpadDown) {
+  } else if (newValue & DPAD_DOWN) {
     if (clawValue > clawMin) {
       clawValue -= clawMoveSpeed;
       clawServo.write(clawValue);
