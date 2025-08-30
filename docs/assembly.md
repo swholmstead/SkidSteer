@@ -1,82 +1,74 @@
-<h2>Assembly Instructions</h2>
+ 1<h2>Assembly Instructions</h2>
 
-<h3>Mast</h3>
+<h3>Wheels</h3>
 
-Attach pulleys to mast sections with M2.6 x 6mm screws.  Ensure that pulleys swivel easily.  You may have to drill out outer holes to ensure that screws roll easily.
+Solder 100mm of wire with JST-XH connector to N20 12V motors.  Push on 2 drive shafts and 1 pinion gear onto motors.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3515.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3649.JPEG" alt="Skidsteer" width=600>
 
-Add 100mm of wire with JST-XH connector to N20 12V motor.  Push spool onto end of mast motor. Attach upholstery thread to spool.
-Insert into mast and secure with mast motor lock and M2.6 x 6mm screw.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3516.JPEG" alt="Skidsteer" width=400>
+Push in 6700-2RS bearings and secure with M2.6 x 6mm bearing retention screws.
 
-Route upholstery thread through the pulleys as in illustration.  
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3650.JPEG" alt="Skidsteer" width=600>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3518.JPEG" alt="Skidsteer" width=400>
+Insert blank drive shafts and motors with drive shafts through bearings and secure motor with motor lock and M2.6 x 6mm screws.
+The right motor is in the front and the left motor is in the rear.
 
-I add some adhesive tire weights to the back of the carriage.  Attach upholstery thread.  I like to use a fishing clip for ease of use.
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3651.JPEG" alt="Skidsteer" width=600>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3517.JPEG" alt="Skidsteer" width=600>
+Attach a wheel spacer and a wheel hub to each drive shaft and secure with M2.6 x 8mm screws.
 
-Attach servo to front servo mount with mast linkage.
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3654.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3655.JPEG" alt="Skidsteer" width=600>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3513.JPEG" alt="Skidsteer" width=600>
 
-<h2>Rear Cover</h2>
+<h3>Arm Gears</h3>
 
-Attach seat to seat support and rear hatch with M2.6 x 6mm screws.  I like to add some adhesive tire weight to the rear cover to provide
-conterbalance when Skidsteer is lifting heavy objects.  Attach propane tank holder with TPU trap to outside of rear cover. Attach propane tank.
+Attach the intermediate arm gear to the arm motor lock with an M2.6 x 6mm screw.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3506.JPEG" alt="Skidsteer" width=600>
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3514.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3652.JPEG" alt="Skidsteer" width=600>
 
-<h2>Interior</h2>
+Insert gears into body and secure arm motor with arm motor lock.  Add an M2.6 x 6mm screw on the outside of the body to the intermediate gear.
+Attach track tensioners to each side of cab with 2 M2.6 x 6mm screws.  There are multiple holes to adjust tension on tracks.
+I like to use the second hole from the top.
 
-Attach steering wheel to dash and attach dash to floor with M2.6 x 6mm screws.
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3653.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3656.JPEG" alt="Skidsteer" width=600>
 
-<h2>Cab</h2>
+<h3>Bucket and Claw</h3>
 
-Attach front and rear fenders with M2.6 x 6mm screws.
+Attach the 9g servos to the bucket and claw with claw bracket.  Route wires along right arm.
 
-Add 100mm of wire with JST-XH connectors to N20 12V motors.  Secure in cab with motor lock and M2.6 x 6mm screw.
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3657.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3658.JPEG" alt="Skidsteer" width=600>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3507.JPEG" alt="Skidsteer" width=400>
+Insert right arm into body and secure with C clip.
 
-Attach steering servo and servo arm to cab with screws including in servo kit. Push steering bar through side slots in cab 
-and attach to servo with M2.6 x 6mm screws.
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3659.JPEG" alt="Skidsteer" width=600>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3509.JPEG" alt="Skidsteer" width=600>
+Insert left arm into body and secure with M2.6 x 8mm screw.
 
-Push 85-2RS 5mm x 8mm bearings into cab and wheel captures.
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3660.JPEG" alt="Skidsteer" width=600>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3508.JPEG" alt="Skidsteer" width=600>
+<h3>Electronics</h3>
 
-Insert rear wheel pivot into bearing and attach to cab with wheel capture using M2.6 x 6mm screws.
+Attach right motor on front side of PCB.  Locate PCB support clip in bottom of body.  Insert PCB into body.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3510.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3661.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3662.JPEG" alt="Skidsteer" width=600>
 
-Attach mast and front servo mount to cab with M2.6 x 6mm screws.  Ensure mast motor wires are routed through hole in front of servo mount.
+Attach claw and bucket servos with brown wire to the TOP.  Attach left motor and arm motor to PCB.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3519.JPEG" alt="Skidsteer" width=600>
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3520.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3663.JPEG" alt="Skidsteer" width=600>
 
-Attach wires to electronics and fit inside of cab.
+<h3>Cab</h3>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3521.JPEG" alt="Skidsteer" width=600>
+Solder 100mm of wire with JST-XH to LEDs.  Insert LED retaining clip and LED into each side of cab cover.  Attach lights to PCB.
 
-<h2>Roll Cage</h2>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3648.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3664.JPEG" alt="Skidsteer" width=600>
 
-Attach LED lights and LED mounts to roll cage.  Route wires down slot in side of roll cage.
+Attach cab cover and rear cover to body with M2.6 x 10mm screws.  Add tracks.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3511.JPEG" alt="Skidsteer" width=600>
-
-<h2>Final Assembly</h2>
-
-Press 106-2RS 6mm x 10mm bearings into rear wheels.  Attach tires to wheels.
-
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3525.JPEG" alt="Skidsteer" width=600>
-
-Attach interior, rear cover, and roll cage to cab to complete assembly.
-
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3526.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3665.JPEG" alt="Skidsteer" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3666.JPEG" alt="Skidsteer" width=600>
