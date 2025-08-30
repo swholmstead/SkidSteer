@@ -15,19 +15,14 @@ Under Tools > Board, select esp32_bluepad32 > ESP 32 Dev Module
 Connect ESP32 Development Kit with USB cable
 Under Tools > Port, select COM port used
 
-Open MiniFork_Bluepad3.0.ino file and click right arrow on top tool bar to download code to ESP32
+Open MiniSkidi_Bluepad_2.0.ino file and click right arrow on top tool bar to download code to ESP32
 
 <h2>Controls</h2>
 
-* Left joystick y-axis controls speed and x-axis controls steering
-* Right joystick y-axis controls raising/lowering mast carriage
-* DPAD up/down control mast tilt
-* "A" button controls lights on/off
+* Left joystick y-axis controls speed and x-axis controls steering.
+* Right joystick y-axis controls raising/lowering bucket arm and x-axis control bucket tilt.
+* DPAD up/down controls opening/closing claw.
+* "A" button controls lights on/off.
 * "B" button executes "wiggle" function to move motors and flash lights (if you have more than 1 vehicle, this makes it easy to identify which
 one is paired with this controller.
-* L1 and R1 bumper buttons adjust the steering trim "center" point.
-
-<h2>Rate Limited Steering</h2>
-Steering is dampered (rate limited).  Continuing to hold in one direction will apply greater turning.  It will also not slam back to centered when
-releasing joystick, but will slowly move back to center.  Right and left wheels move at different rate to give better turning performance.  All
-of these combined will allow the forklift to make very sharp turns at low speed, but more gradual turns at higher speeds.
+* Holding L1 bumper buttons engages low speed gear (reduces speed by 25%) for fine movement control.
