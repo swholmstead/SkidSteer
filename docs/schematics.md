@@ -21,8 +21,8 @@ Solder all components on the PCB.
 <b>NOTE: Make sure to use the power switch standoff under the toggle switch so that it will be in the right height
 so that you can operate it without opening the Skidsteer covers.</b>
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3502.JPEG" alt="Buck Converter" width=400>
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3503.JPEG" alt="Buck Converter" width=400>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3643.JPEG" alt="Soldering" width=400>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3644.JPEG" alt="Soldering" width=400>
 
 <h3>5V Buck Converter</h3>
 Assembly the 5V buck converter. Ensure that the 5V jumper has solder and you use an exacto knife to cut the trace above the ADJ jumper.
@@ -30,16 +30,17 @@ Assembly the 5V buck converter. Ensure that the 5V jumper has solder and you use
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/S20250310_0001.jpg" alt="Buck Converter" width=600>
 
 Assembly the PCB, batteries, fuse, and 5V buck converter.  Turn on power and ensure buck converter is generating +5V.
-There are labeled test points on the STEER servo pins that you can use.
+There are labeled test points on the servo pins that you can use.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3504.JPEG" alt="Buck Converter" width=400>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3645.JPEG" alt="Buck Converter" width=400>
 
 <h3>DRV8833 Motor Drivers</h3>
 Assembly the DRV8833 Motor Driver boards.  Ensure that J2 jumper is soldered.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/S20250310_0002.jpg" alt="Buck Converter" width=600>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/S20250310_0002.jpg" alt="DRV8833" width=600>
 
 Add DRV8833 boards and ESP32 board to PCB.  Ensure that all 3 LEDs illuminate when power is on.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3505.JPEG" alt="Buck Converter" width=400>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3646.JPEG" alt="DRV8833" width=400>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3647.JPEG" alt="ESP32" width=400>
 
