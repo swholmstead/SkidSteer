@@ -1,4 +1,4 @@
- 1<h2>Assembly Instructions</h2>
+<h2>Assembly Instructions</h2>
 
 <h3>Wheels</h3>
 
@@ -7,7 +7,7 @@ Solder 100mm of wire with JST-XH connector to N20 12V motors.  Push on 2 drive s
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3649.JPEG" alt="Skidsteer" width=600>
 
 
-Push in 6700-2RS bearings and secure with M2.6 x 6mm bearing retention screws.
+Push in all 4 6700-2RS bearings and secure with M2.6 x 6mm bearing retention screws.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3650.JPEG" alt="Skidsteer" width=600>
 
@@ -29,10 +29,12 @@ Attach the intermediate arm gear to the arm motor lock with an M2.6 x 6mm screw.
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3652.JPEG" alt="Skidsteer" width=600>
 
 Insert gears into body and secure arm motor with arm motor lock.  Add an M2.6 x 6mm screw on the outside of the body to the intermediate gear.
+
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3653.JPEG" alt="Skidsteer" width=600>
+
 Attach track tensioners to each side of cab with 2 M2.6 x 6mm screws.  There are multiple holes to adjust tension on tracks.
 I like to use the second hole from the top.
 
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3653.JPEG" alt="Skidsteer" width=600>
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3656.JPEG" alt="Skidsteer" width=600>
 
 <h3>Bucket and Claw</h3>
