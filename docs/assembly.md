@@ -23,7 +23,7 @@ You may need to drill out the single layer of support material in each wheen hub
 
 <h3>Arm Gears</h3>
 
-Attach the intermediate arm gear to the arm motor lock with an M2.6 x 6mm screw.
+Attach the intermediate arm gear to the arm motor lock with an M2.6 x 8mm screw.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3652.JPEG" alt="Skidsteer" width=600>
 
