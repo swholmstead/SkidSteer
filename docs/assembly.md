@@ -6,7 +6,6 @@ Solder 100mm of wire with JST-XH connector to N20 12V motors.  Push on 2 drive s
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3649.JPEG" alt="Skidsteer" width=600>
 
-
 Push in all 4 6700-2RS bearings and secure with M2.6 x 6mm bearing retention screws.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3650.JPEG" alt="Skidsteer" width=600>
@@ -16,7 +15,7 @@ The right motor is in the front and the left motor is in the rear.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3651.JPEG" alt="Skidsteer" width=600>
 
-Attach a wheel spacer and a wheel hub to each drive shaft and secure with M2.6 x 8mm screws.
+Attach a wheel spacer (optional) and a wheel hub to each drive shaft and secure with M2.6 x 8mm screws.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3654.JPEG" alt="Skidsteer" width=600>
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3655.JPEG" alt="Skidsteer" width=600>
