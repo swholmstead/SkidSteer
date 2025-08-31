@@ -12,8 +12,8 @@ ControllerPtr myController;
 
 #define armMotor0 19  // Used for controlling arm motor movement
 #define armMotor1 21  // Used for controlling arm motor movement
-#define lightPin0 18  // Used for controlling cab lights
-#define lightPin1 5   // Used for controlling cab lights
+#define lightPin0 5  // Used for controlling cab lights
+#define lightPin1 18   // Used for controlling cab lights
 
 #define rightMotor0 26 // Used for controlling the right motor movement
 #define rightMotor1 25 // Used for controlling the right motor movement
