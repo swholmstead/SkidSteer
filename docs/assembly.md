@@ -15,7 +15,7 @@ The right motor is in the front and the left motor is in the rear.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3651.JPEG" alt="Skidsteer" width=600>
 
-Attach a wheel spacer (optional) and a wheel hub to each drive shaft and secure with M2.6 x 8mm screws.
+Attach a wheel spacer and a wheel hub to each drive shaft and secure with M2.6 x 8mm screws.
 You may need to drill out the single layer of support material in each wheen hub.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3654.JPEG" alt="Skidsteer" width=600>
