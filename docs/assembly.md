@@ -16,10 +16,10 @@ The right motor is in the front and the left motor is in the rear.
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3651.JPEG" alt="Skidsteer" width=600>
 
 Attach a wheel spacer (optional) and a wheel hub to each drive shaft and secure with M2.6 x 8mm screws.
+You may need to drill out the single layer of support material in each wheen hub.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3654.JPEG" alt="Skidsteer" width=600>
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3655.JPEG" alt="Skidsteer" width=600>
-
 
 <h3>Arm Gears</h3>
 
@@ -38,7 +38,13 @@ I like to use the second hole from the top.
 
 <h3>Bucket and Claw</h3>
 
-Attach the 9g servos to the bucket and claw with claw bracket.  Route wires along right arm.
+Attach the 9g servos to the bucket and claw with claw bracket.  Allow a little slack in the servo wires to allow
+for full movement.  Route wires along right arm.
+
+When attaching the servos, you need to align them so that the starting position has the bucket sitting level with the ground.
+The starting position for the claw is all the way open.  You may need to return later and adjust servo starting positions
+after the electonics are complete and installed to ensure that claw opens/closes all the way and the bucket doesn't
+bind up when fully up.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3657.JPEG" alt="Skidsteer" width=600>
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3658.JPEG" alt="Skidsteer" width=600>
