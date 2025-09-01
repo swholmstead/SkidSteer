@@ -24,7 +24,7 @@ ControllerPtr myController;
 #define bucketMin 10
 #define bucketMax 140
 #define bucketStart 122 // bucket starting position
-// #define bucketStart 115 // forklift starting position
+// #define bucketStart 118 // forklift starting position
 #define clawMin 10
 #define clawMax 120
 #define clawMoveSpeed 6
