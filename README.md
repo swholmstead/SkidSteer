@@ -4,6 +4,7 @@
 
 <h2>Table of Contents</h2>
 
+* [3D Models](https://www.printables.com/model/1399802-3d-printed-rc-skidsteer)
 * [Bill of Materials](docs/bom.md)
 * [Schematic and Printed Circuit Board](docs/schematics.md)
 * [Assembly Instructions](docs/assembly.md)
