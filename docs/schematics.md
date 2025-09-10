@@ -34,6 +34,7 @@ When the slide switch is towards to top of the board (closest to the batteries),
 There are labeled test points on the servo pins on the back of the board that you can use to test for +5V.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3645.JPEG" alt="Buck Converter" width=400>
+<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3686.JPEG" alt="Buck Converter" width=600>
 
 <h3>DRV8833 Motor Drivers</h3>
 Assembly the DRV8833 Motor Driver boards.  Ensure that J2 jumper is soldered.
