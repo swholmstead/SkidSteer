@@ -1,6 +1,8 @@
 <h1>3D printed RC Skidsteer</h1>
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3390.JPEG" alt="Skidsteer" width=600 height=400>
-<img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3392.JPEG" alt="Skidsteer" width=600 height=400>
+<div style="display: flex; gap: 20px;">
+  <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3390.JPEG" alt="Skidsteer" width=400>
+  <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3392.JPEG" alt="Skidsteer" width=400>
+</div>
 
 <h2>Table of Contents</h2>
 
