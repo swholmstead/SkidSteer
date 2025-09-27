@@ -95,7 +95,7 @@ void processGamepad(ControllerPtr ctl) {
   //Raising and lowering the bucket
   processBucket(ctl->axisRX());
   //Raising and lowering the claw
-  processClaw(ctl->dpad());
+  processClaw(ctl->dpad(), ctl->r1(), ctl->l1());
   //Aux
   processLights(ctl->thumbR() | ctl->a());
 
@@ -177,13 +177,13 @@ void processBucket(int newValue) {
   bucketServo.write(bucketValue);
 }
 
-void processClaw(int newValue) {
-  if (newValue & DPAD_UP) {
+void processClaw(int newValue, bool claw_close, bool claw_open) {
+  if (newValue & DPAD_UP || claw_open) {
     if (clawValue < clawMax) {
       clawValue += clawMoveSpeed;
       clawServo.write(clawValue);
     }
-  } else if (newValue & DPAD_DOWN) {
+  } else if (newValue & DPAD_DOWN || claw_close) {
     if (clawValue > clawMin) {
       clawValue -= clawMoveSpeed;
       clawServo.write(clawValue);

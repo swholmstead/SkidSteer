@@ -21,7 +21,7 @@ Open MiniSkidi_Bluepad_2.0.ino file and click right arrow on top tool bar to dow
 
 * Left joystick y-axis controls speed and x-axis controls steering.
 * Right joystick y-axis controls raising/lowering bucket arm and x-axis control bucket tilt.
-* DPAD up/down controls opening/closing claw.
+* DPAD up/down and left/right bumper controls opening/closing claw.
 * "A" button controls lights on/off.
 * "B" button executes "wiggle" function to move motors and flash lights (if you have more than 1 vehicle, this makes it easy to identify which
 one is paired with this controller.
