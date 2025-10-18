@@ -25,4 +25,3 @@ Open MiniSkidi_Bluepad_2.0.ino file and click right arrow on top tool bar to dow
 * "A" button controls lights on/off.
 * "B" button executes "wiggle" function to move motors and flash lights (if you have more than 1 vehicle, this makes it easy to identify which
 one is paired with this controller.
-* Holding L1 bumper buttons engages low speed gear (reduces speed by 25%) for fine movement control.
