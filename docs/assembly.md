@@ -2,7 +2,7 @@
 
 <h3>Wheels</h3>
 
-Solder 100mm of wire with JST-XH connector to N20 12V motors.  Push on 2 drive shafts and 1 pinion gear onto motors.
+Solder 10 cm of wire with JST-XH connector to N20 12V motors.  Push on 2 drive shafts and 1 pinion gear onto motors.
 
 <img src="https://github.com/swholmstead/Skidsteer/blob/main/pictures/IMG_3649.JPEG" alt="Skidsteer" width=600>
 
